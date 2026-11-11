@@ -10,9 +10,11 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.57.0",
-    "@types/node": "^25.0.3"
+    "@types/node": "^25.9.9"
   },
   "dependencies": {
-    "playwright": "^1.65.0"
+    "dotenv": "^18.0.10",
+    "playwright": "^1.65.0",
+    "xlsx": "^0.18.5"
   }
 }
