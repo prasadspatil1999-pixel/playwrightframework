@@ -13,4 +13,9 @@ export class bassepage {
     async click(locator: Locator) {
         await locator.click()
     }
+    async clear(locator:Locator)
+    {
+        await locator.clear()
+        
+    }
 }
