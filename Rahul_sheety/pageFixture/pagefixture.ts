@@ -3,11 +3,13 @@ import { loginPage } from '../pomPpage/loginPage'
 import { addToCartPage } from '../pomPpage/addtocartpage'
 import { mycart } from '../pomPpage/Mycart'
 import { payement } from '../pomPpage/payementpage'
+import { orderPAge } from '../pomPpage/orderPage'
 type pomFixture = {
     login: loginPage
     addtocart:addToCartPage
     mycart:mycart
     payment:payement
+    order:orderPAge
 }
 
 export const test=basetest.extend<pomFixture>({
@@ -24,5 +26,9 @@ export const test=basetest.extend<pomFixture>({
     payment:async({page},use)=>
     {
         await use(new payement(page))
+    },
+    order:async({page},use)=>
+    {
+        await use(new orderPAge(page))
     }
 })

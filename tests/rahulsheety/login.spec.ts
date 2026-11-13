@@ -7,7 +7,7 @@ const testdata:any=Exceldata.getData(filepath,filename)
 const data=testdata[0]
 let name="ADIDAS ORIGINAL"
 //let ciy="India"
-test("Application login",async({login,addtocart,mycart,payment})=>
+test("Application login",async({login,addtocart,mycart,payment,order})=>
 {
     await login.launchurl(data.url)
     await login.logininfo(data.username,data.password)
@@ -15,4 +15,7 @@ test("Application login",async({login,addtocart,mycart,payment})=>
     await mycart.mycart()
     await payment.creditcarddetails(data.CardNumber,data.cvv,data.Nameofcard,data.username)
     await payment.addressDetails(data.country,data.ciy)
+    const orderhistorey=await order.orders()
+    console.log("Order show = ",orderhistorey)
+    
 })
