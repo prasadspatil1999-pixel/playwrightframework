@@ -1,5 +1,6 @@
 import { Page, Locator } from '@playwright/test'
-export class bassepage {
+export class bassepage
+ {
     readonly page: Page
     constructor(page: Page) {
         this.page = page
@@ -17,5 +18,8 @@ export class bassepage {
     {
         await locator.clear()
         
+    }
+    async getText(locator: Locator) {
+        return await locator.textContent()
     }
 }
