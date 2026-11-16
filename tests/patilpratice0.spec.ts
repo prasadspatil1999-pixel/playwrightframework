@@ -33,9 +33,9 @@ test("Fill and Vlaidate the textBox",async({page})=>
 
     const errormessage= await page.locator("div#error").textContent()
     console.log(errormessage)
-    await expect(await page.locator("div.show")).toContainText("Your password is invalid!")
-    await expect(await page.locator("div.show")).toHaveText("Your password is invalid!")
+    await expect( page.locator("div.show")).toContainText("Your password is invalid!")
+    await expect( page.locator("div.show")).toHaveText("Your password is invalid!")
 
-    await 
+     
 
 })
