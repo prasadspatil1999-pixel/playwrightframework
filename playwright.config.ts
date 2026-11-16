@@ -37,17 +37,22 @@ timeout:70000
     trace: 'on',
     screenshot: 'on',    
     video: 'on',
-    headless : true
+    headless : true,
+    channel: 'chrome'
+
 
   },
 
   /* Configure projects for major browsers */
   projects: [
-    { 
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-
+    // { 
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
+{
+    name: 'chrome',
+    use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+},
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
