@@ -19,6 +19,12 @@ pipeline {
             }
         }
 
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'npx playwright install chromium'
+            }
+        }
+
         stage('Run Playwright Tests') {
             steps {
                 bat 'npx playwright test'
